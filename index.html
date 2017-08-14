@@ -1,10 +1,35 @@
- <html>
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>App</title>
+    <script type="text/javascript">
+       function hideLoading() {
+            document.getElementById('divLoading').style.display = "none";
+            document.getElementById('divFrameHolder').style.display = "block";
+        }
 
+    </script>
+<style type="text/css">
+#divLoading{
+
+width:100%;
+height:100%
+background-color:#000000;
+text-align:center;
+padding-top:20%;
+
+}
+</style>
 </head>
-<body >
+<body style="margin:0px;padding:0px;overflow:hidden;" bgcolor="#000000">
+   <center>
+    <form id="form1" runat="server">
+    <div id="divLoading">
+        <img src="ajax-loader.gif" alt="Loading..." />
+    </div>
+    <div id="divFrameHolder" style="display:none">
+   <iframe src="http://rdestweb.com/" onload="hideLoading()" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>
 
-<a href="http://rdestweb.com/" target="_self" >CLick Meee</a>
-
+    </div>
+    </form></center>
 </body>
 </html> 
